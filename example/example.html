@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>panelSider example</title>
+    <!--Bootstrap Stylesheet-->
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- PanelSlider Stylesheet -->
+    <link rel="stylesheet" href="../css/panelSlider.css">
+
+
+    <!--jQuery-->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.bootcss.com/popper.js/1.9.3/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <!-- panelSlider Javascript-->
+    <script src="../js/panelSlider.js"></script>
+
+</head>
+<body>
+
+
+<a href="Javascript:test1();">one panelslider</a><br/>
+
+<a href="Javascript:test3();">three panelslider</a><br/>
+
+<a href="Javascript:confrim();">confrim</a><br/>
+
+<a href="Javascript:msgAlert();">msg alert</a><br/>
+
+
+<script>
+
+  function test1(){
+    panelSlider({
+      url:'pageUrl',
+      title:'title',
+      width:60,
+    }).add();
+  }
+
+  function test3(){
+    panelSlider({
+      url:'pageUrl',
+      title:'title',
+      level:1,
+      width:60,
+    }).add();
+
+    panelSlider({
+      url:'pageUrl',
+      title:'title',
+      level:2,
+      width:50,
+    }).edit();
+
+    panelSlider({
+      url:'pageUrl',
+      title:'title',
+      level:3,
+      width:30,
+    }).open();
+  }
+
+
+  function confrim(){
+    panelSlider({
+      url:'pageUrl',
+      title:'title',
+      tips:'example msg'
+    }).confirm();
+  }
+
+  function msgAlert(){
+    console.log(55);
+    panelAlert({
+      msg:'example msg',
+      them:'success',
+      refresh:false,
+      time:1000
+    });
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+/*@import url('https://cdn.bootcss.com/loaders.css/0.1.2/loaders.css');*/
+@import url('https://cdn.bootcss.com/css-loader/3.0.1/css-loader.css');
+
+.loader{
+    position: relative;
+}
+.loader.is-active{
+    background-color: rgba(0,0,0,0);
+}
+.loader-ball:before{
+    content: 'loading';
+    background-color: #33a038;
+    height: 70px;
+    width: 70px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.panel-slider
+{
+    position: fixed;
+    right: 0px;
+    top: 50px;
+    width: 0px;
+    background: #ffffff;
+    height: 100%;
+    padding: 0px;
+    z-index: 1;
+    border: 4px solid #ddd;
+    overflow: hidden;
+
+}
+
+.panel-slider .ps-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.panel-slider .ps-heading{
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    background: #eee;
+    height: 40px;
+    line-height: 40px;
+}
+
+.panel-slider .ps-control{
+    text-align: right;
+    line-height: 32px;
+}
+
+
+.panel-slider .ps-body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:40px;
+    overflow: hidden;
+}
+
+.panel-slider .ps-content{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 10px;
+    margin-bottom: 100px;
+}
+
+
+.panel-confirm .modal-content{
+    margin-top: 160px;
+}
+
+.confirm-container{
+    margin-top: 60px;
+    width: 25%;
+    height: 200px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-alert{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 260px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0,0,0,0);
+    z-index: 999;
+    max-height: 100%;
+    overflow: hidden; 
+}
+
+.ps-alert{
+    border: 1px solid #cccbcb;
+    margin-top: 5px;
+    padding: 10px;
+    min-height: 50px;
+    word-break: break-all;
+    opacity: 0;
+}
+
+.ps-close{
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    background-image: url("../image/close.png");
+}
