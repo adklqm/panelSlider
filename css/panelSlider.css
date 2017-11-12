@@ -1,4 +1,3 @@
-/*@import url('https://cdn.bootcss.com/loaders.css/0.1.2/loaders.css');*/
 @import url('https://cdn.bootcss.com/css-loader/3.0.1/css-loader.css');
 
 .loader{
@@ -66,6 +65,8 @@
     overflow-y: scroll;
     padding-top: 10px;
     margin-bottom: 100px;
+    width: 100%;
+    height: 100%;
 }
 
 

@@ -11,7 +11,7 @@ function _psInit(){
         var ps3  = $('<div class="panel-slider" id="panel-slider-3">');
 
         var confirm = 
-            '<div class="modal fade panel-confirm" id="panel-confirm" tabindex="-1" role="dialog" aria-hidden="true">'
+            '<div class="modal fade panel-confirm" id="panel-confirm" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">'
             +   '<div class="modal-dialog" role="document">'
             +       '<div class="modal-content">'
             +           '<div class="modal-header">'
@@ -221,7 +221,6 @@ window.panelSlider = function(option)
             },'fast');
             var loader = '<div class="loader loader-ball is-active"></div>';
             ps_content.html(loader);
-
             $.ajax({
                 type:'GET',
                 url:this._initUrl(),
@@ -297,11 +296,6 @@ window.panelSlider = function(option)
         },
 
         confirm:function(){
-
-            confirm.modal({
-                backdrop:'static',
-                keyboard:false
-            });
             confirm_title.html(config.title);
             confirm_body.html(config.tips);
             confirm_sure.unbind('click');
